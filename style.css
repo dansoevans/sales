@@ -221,6 +221,16 @@ padding-bottom: 10px;
 }
 
 @media (max-width: 480px) {
+    .ticket-count{
+        width: 33px;
+        height: 25px;
+    border: 1px solid gainsboro ;
+    border-top: dotted;
+    border-bottom: dotted;
+    border-radius: 4px;
+    position: relative;
+    
+    }
     .num-count{
         position: absolute;
         left: 117.5px ;
