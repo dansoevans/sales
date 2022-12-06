@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+    <head>
+        <title>dropdown</title>
+    </head>
+
+<div class="dropdown">
+    <div class="select">
+        <span class="selected">All Items</span>
+        <div class="caret"></div>
+    </div>
+    <ul class="menu">
+        <li>All Items</li>
+        <li>Discounts</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+</html>
+
+<style>
+
+.dropdown{
+min-width: 15em;
+position: relative;
+margin: 2em;
+}
+.dropdown * {
+box-sizing: border-box;
+
+}
+
+.select {
+background: rgb(9, 5, 58);
+color: gold;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 2px #2a2f3b solid;
+border-radius: 0.5em;
+padding: 1em;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #264891;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover{
+background: #323741;
+}
+
+.caret {
+width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 6px solid #fff;
+transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+.menu li {
+padding: 0.7em 0.5em;
+margin: 0.5em 0;
+border-radius: 0.5em;
+cursor: pointer;
+}
+
+.menu li:hover {
+background: #2a2d35;
+}
+
+.active {
+    background: #23242a;
+}
+
+.menu-open {
+display: block;
+opacity: 1;
+
+}
+
+
+
+
+</style>
+
+<script>
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+const select = dropdown.querySelector('.select');
+const caret = dropdown.querySelector('.caret');
+const menu = dropdown.querySelector('.menu');
+const options = dropdown.querySelectorAll('.menu li');
+const selected = dropdown.querySelector('.selected');
+//add a click event to the select element
+select.addEventListener('click', () => {
+    //Add the clicked select styles to the select element
+    select.classList.toggle('select-clicked');
+caret.classList.toggle('caret-rotate');
+//add the open styles to the menu element
+menu.classList.toggle('menu-open');
+});
+//loop through all option elements
+options.forEach(option => {
+    //add a click event to the option element
+    option.addEventListener('click', () => {
+//change selected inner text to clicked option for inner text
+selected.innerText = option.innerText;
+//add the clicked select styles to the select element
+select.classList.remove('select-clicked');
+//add the rotate styles to the caret element
+caret.classList.remove('caret rotate');
+//add the open styles to the menu element
+menu.classList.remove('menu-open');
+//remove active class from all option elements
+options.forEach(option => {
+    option.classList.remove('active');
+});
+//add active class to clicked option element
+option.classList.add('active');0
+});
+});
+});
+</script>

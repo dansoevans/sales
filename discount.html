@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Discount</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="sales.css">
+	
+    
+    <body>
+        
+      
+        <div class="charge">
+        <a  style="text-decoration:none; padding: 30px" href="">CHARGE<br>
+            <div class="addCharge">0</div>
+            </a>
+      </div>
+
+     <div class="web">
+        <a style="text-decoration:none; border:none; padding: 15px;  ; "  href="web1.html"  >  
+        GO TO ITEMS</a>
+    </div>
+
+
+
+
+<nav id="sideNav"> 
+    <ul class="sideNav">
+    <br>
+    <br>
+    <br>
+    <li> <div> <a href="#"> Sales</a> </div></li>
+    <li> <div> <a href="#"> Receipts</a> </div></li>
+    <li> <div> <a href="#"> Items</a> </div></li>
+    <li> <div> <a href="#"> Settings</a> </div></li>
+    <hr>
+    <li> <div> <a href="#"> Back Office</a> </div></li>
+    <li> <div> <a href="#"> Apps</a> </div></li>
+    <li> <div> <a href="#"> Support</a> </div></li>
+    </ul>
+    </nav>
+    
+    <img src="menu 2.png" alt="" id="menuBtn">
+    
+    <section>
+        
+        
+    <!--    <div class="dropdown">
+            <button class="dropdown_hover">All Items</button>
+            <div class="dropdown_menu">
+                <a href="#">all items</a>
+                <a href="#">Discount</a>
+             </div>
+        </div>
+    </section>
+
+
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">All Items</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li>All Items</li>
+            <li>Discounts</li>
+        </ul>
+    </div> -->
+
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">Discounts</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li><a  href="loyverse app sales.html" style="text-decoration: none; color: #9fa5b5;">All Items</a></li>
+            <li><a  href="index.html" style="text-decoration: none; color: #9fa5b5;">Discounts</a></li>
+        </ul>
+    </div>
+    
+
+<header>
+   <!-- <div class="search">
+    <a href="search.html"><img src="search.jpeg"alt=""></a>
+</header>
+</div>-->
+
+
+<div class="topnav">
+    <a class="active" href="Sales">.</a>
+    <a href="#about">Ticket</a>
+    <a href="#contact"></a>
+    <input type="text" placeholder="Search..">
+  </div>
+
+
+
+  <div class="search">
+    <div class="icon"></div>
+    <div class="input"></div>
+        <input type="text" placeholder="Search here" id="mysearch">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+	
+	
+    
+    
+    
+    
+    
+    
+
+
+<script>
+
+
+    
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+    
+    sideNav.style.left = "-500px";
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "100px"){
+            sideNav.style.right= "-900px";
+    
+        }
+        else{
+            sideNav.style.left = "-2px"
+        }
+    }
+    
+    let column1 =document.getElementsByClassName('column1')
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+const select = dropdown.querySelector('.select');
+const caret = dropdown.querySelector('.caret');
+const menu = dropdown.querySelector('.menu');
+const options = dropdown.querySelectorAll('.menu li');
+const selected = dropdown.querySelector('.selected');
+//add a click event to the select element
+select.addEventListener('click', () => {
+    //Add the clicked select styles to the select element
+    select.classList.toggle('select-clicked');
+caret.classList.toggle('caret-rotate');
+//add the open styles to the menu element
+menu.classList.toggle('menu-open');
+});
+//loop through all option elements
+options.forEach(option => {
+    //add a click event to the option element
+    option.addEventListener('click', () => {
+//change selected inner text to clicked option for inner text
+selected.innerText = option.innerText;
+//add the clicked select styles to the select element
+select.classList.remove('select-clicked');
+//add the rotate styles to the caret element
+caret.classList.remove('caret rotate');
+//add the open styles to the menu element
+menu.classList.remove('menu-open');
+//remove active class from all option elements
+options.forEach(option => {
+    option.classList.remove('active');
+});
+//add active class to clicked option element
+option.classList.add('active');0
+});
+});
+});
+
+
+  const icon = document.querySelector('.icon');
+  const search = document.querySelector('.search');
+  icon.onclick = function(){
+  search.classList.toggle('active')
+    
+    }
+
+
+
+
+
+
+
+    </script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Bar using CSS and JS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <br>
+    <h1>Add Customer to ticket</h1><br><hr>
+    <div class="search">
+        <div class="icon"></div>
+        <div class="input"></div>
+            <input type="text" placeholder="Search " id="mysearch">
+            <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div><br><hr>
+<br>
+   <center><strong> <a href="cart.html" style="text-decoration: none; color: olivedrab;"> ADD NEW CUSTOMER <br></a></strong></center>
+
+    <br>
+    <hr>
+
+
+
+
+
+
+</body>
+</html>
+<script>
+  const icon = document.querySelector('.icon');
+  const search = document.querySelector('.search');
+  icon.onclick = function(){
+  search.classList.toggle('active')
+    
+    }
+        
+        
+    </script>
